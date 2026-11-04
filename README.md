@@ -53,7 +53,7 @@ The prompts use public resources. No commercial prompt collection, private repos
 
 | Step | What it does |
 | --- | --- |
-| [07 · Consolidate](spec-driven/07-consolidate.md) | Reconciles the six specs |
+| [07 · Consolidate](spec-driven/07-consolidate.md) | Reconciles the six specs, interviews you about open questions, and checks them again |
 | [08 · Threat model](spec-driven/08-threat-model.md) | Uses Grim Prompter to write `THREAT_MODEL.md` and update the specs |
 | [09 · Resolve open items](spec-driven/09-decisions.md) | Records your decisions in the files that own them |
 | [10 · Backlog](spec-driven/10-backlog.md) | Creates a GitHub epic and implementation issues |
@@ -78,13 +78,23 @@ The `threat-model/` run folder is private review material. Review it for sensiti
 
 ## Related projects
 
-Dread Forge brings these projects into one workflow:
+Dread Forge uses these open-source projects by Jim Manico. Each can also be used on its own:
 
 | Project | Role in the forge |
 | --- | --- |
 | [Grim Prompter](https://github.com/jmanico/grim-prompter) | Threat modeling in step 08 |
 | [Dread Ledger](https://github.com/jmanico/dread-ledger) | Security event planning in step 05 and logging verification in step 12 |
 | [Trim Reaper](https://github.com/jmanico/trim-reaper) | Dependency policy in step 06 and dependency review in step 13 |
+
+We recommend cloning all three alongside Dread Forge so your coding agent can read their prompts and references locally. Run these commands from the parent directory containing your `dread-forge` checkout:
+
+```sh
+git clone https://github.com/jmanico/grim-prompter.git
+git clone https://github.com/jmanico/dread-ledger.git
+git clone https://github.com/jmanico/trim-reaper.git
+```
+
+Keep these checkouts outside the application you are building. Tell your agent where they are in each session that uses them (steps 05, 06, 08, 12, and 13), and follow each project's README for usage and any agent-specific setup. If you already have a checkout, use that copy instead of cloning it again.
 
 ## Contributing
 
