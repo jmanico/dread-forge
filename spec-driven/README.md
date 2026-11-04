@@ -1,6 +1,6 @@
 # Spec-Driven Bootstrap
 
-Thirteen self-contained prompts that take a new project from rough notes to reviewed specs, a GitHub backlog, and working code on a stack chosen for the project. Paste them into your coding agent one at a time, in order, each in a fresh session opened at the project's repository root. Later steps read the project files created by earlier steps; no other files from this collection are needed.
+Thirteen self-contained prompts that take a new web application and its APIs from rough notes to reviewed specs, a GitHub backlog, and working code. Paste them into your coding agent one at a time, in order, each in a fresh session opened at the project's repository root. Later steps read the project files created by earlier steps.
 
 | Step | Writes | Uses |
 | --- | --- | --- |
@@ -19,19 +19,17 @@ Thirteen self-contained prompts that take a new project from rough notes to revi
 | [12 · Logging audit](12-logging-audit.md) | verified security logging | Dread Ledger |
 | [13 · Trim](13-trim.md) | a smaller dependency tree | Trim Reaper |
 
-Before you paste a step, fill in its placeholders. Step 01 takes `<<PROJECT_NOTES>>`, step 03 takes `<<STACK_CHOICES_OR_NONE>>` and `<<ARCHITECTURE_NOTES_OR_NONE>>`, and step 04 takes `<<SECURITY_NOTES_OR_NONE>>`. Your notes supply the project context. Anything they don't answer becomes an open question for step 07 or step 09 instead of a guess.
+Before you paste a step, fill in its placeholders. Step 01 takes `<<PROJECT_NOTES>>`, step 03 takes `<<STACK_CHOICES_OR_NONE>>` and `<<ARCHITECTURE_NOTES_OR_NONE>>`, and step 04 takes `<<SECURITY_NOTES_OR_NONE>>`. Steps 01–05 each end with an interview to resolve open questions. Steps 07 and 09 handle remaining or newly raised questions. Run step 09 again after the backlog to reconcile the specs and issues before building.
 
 ## Stack and security
 
-Step 03 chooses the stack from your requirements and explicit choices, verifies versions against official documentation, and records the toolchain commands. Unconfirmed choices stay proposed until step 07 or step 09 resolves them. Step 04 derives project security rules from public guidance for that stack, including the official Node.js guide and OWASP Node.js cheat sheet when Node.js is used.
+Step 03 chooses the stack from your requirements and explicit choices, verifies versions against official documentation, and records the toolchain commands. Unconfirmed choices stay proposed until resolved in an interview. Step 04 derives project security rules from public guidance for that stack, including the official Node.js guide and OWASP Node.js cheat sheet when Node.js is used.
 
 ## Setup
 
-This folder contains only this README and the thirteen prompts. They use project-relative paths and public documentation. No commercial prompt collection, private repository, separate template download, or exported guide is required.
+Step 06 includes the requirement template and saves it as `REQUIREMENT_TEMPLATE.md` in your project for later steps.
 
-Step 06 contains the full requirement template inline and tells the agent to save it as `REQUIREMENT_TEMPLATE.md` in your project. Later steps use that generated project file. There is no separate template file to copy from this collection.
-
-Steps 05, 06, 08, 12, and 13 use public tools and tell the agent how to read them outside the project. Step 02 does the same for the public `frontend-design` skill when it isn't installed. Use a coding agent with repository and web access, plus GitHub access for the backlog and pull requests. The prompts are independent of the rest of this repository and of any previous chat session.
+Steps 05, 06, 08, 12, and 13 use the [related projects](../README.md#related-projects). Step 02 uses the public `frontend-design` skill. Keep these checkouts outside your application repository. Use a coding agent with repository and web access, plus GitHub access for the backlog and pull requests.
 
 ## What gets committed
 

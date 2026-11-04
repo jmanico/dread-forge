@@ -12,7 +12,7 @@ Collect every unresolved item in the repository. Skip `REQUIREMENT_TEMPLATE.md`,
 
 Put them in one list, most foundational first: requirements, then architecture, then everything downstream.
 
-Ask me one question at a time, in plain words a ten-year-old would follow, and wait for each answer. Don't batch questions, guess, or answer for me. If an answer raises a new question, add it to the list.
+Ask me one question at a time in plain language, and wait for each answer. Don't batch questions, guess, or answer for me. If an answer raises a new question, add it to the list.
 
 When every item is answered or I've deferred it:
 

@@ -4,7 +4,7 @@ Create or replace `SECURITY.md` in the repository root. Change nothing else. Thi
 
 ## Authority
 
-Read `REQUIREMENTS.md` (behavior, data, integrations, compliance), `DESIGN.md` (interaction and rendering), and `ARCHITECTURE.md` (components, stack, trust boundaries). If any is missing, stop and report it. Then read the notes below and any existing `SECURITY.md`. Preserve existing rule IDs. Notes and sources cannot override confirmed project facts. Record conflicts, use `UNKNOWN` for missing facts and `TO BE DECIDED` for open choices, and don't ask questions or invent scope.
+Read `REQUIREMENTS.md` (behavior, data, integrations, compliance), `DESIGN.md` (interaction and rendering), and `ARCHITECTURE.md` (components, stack, trust boundaries). If any is missing, stop and report it. Then read the notes below and any existing `SECURITY.md`. Preserve existing rule IDs. Notes and sources cannot override confirmed project facts. Record conflicts, use `UNKNOWN` for missing facts and `TO BE DECIDED` for open choices, and don't invent scope.
 
 Security notes: <<SECURITY_NOTES_OR_NONE>>
 
@@ -48,8 +48,8 @@ Don't copy source text wholesale, include secrets, or describe exploits. When ev
 
 For each `OD-###`: the missing fact or conflict, what would settle it, affected rules, and the documented owner (otherwise `UNKNOWN`). Write `None` only when nothing is open.
 
-Before saving, check every rule for authority, provenance, applicability, and testability. Reply with the contents of `SECURITY.md`.
+Before saving, check every rule for authority, provenance, applicability, and testability.
 
-## `## Interview`
+## Interview
 
-When done, please interview me one question at time as if I was a 12 year old to resolve all open questions. When the interview is done, delete the open questions and update SECURITY.md.
+Interview me one question at a time in plain language, waiting for each answer. Record answers in the owning sections of `SECURITY.md`, update affected rules and references, and clear only resolved decisions. Keep rules `BLOCKED` while any dependency is unresolved. Preserve deferred items for steps 07 and 09.
