@@ -20,13 +20,14 @@ A file that doesn't own something links to the owner instead of restating it. Wh
 3. **Resolve.** Keep the owner's copy of each duplicate and replace the others with a one-line reference at most. Delete low-signal content, and when you're unsure, keep it and list it in your summary. Settle a contradiction with the owning file when ownership is clear. Otherwise preserve the alternatives under a stable open-item ID in the owning file. Don't pick an interpretation just because it sounds more secure, and never reuse an ID.
 4. **Verify.** Re-read all six files end to end. Confirm that nothing was dropped, that every reference resolves to a real entry, and that each file stands on its own.
 
-Reply with a short summary of what moved, what was deleted, and what you kept but weren't sure about.
+## Interview
 
-## `## Interview`
+Collect every unresolved item in the six specs: open questions and decisions (`OQ`, `DQ`, `AQ`, `OD`), unresolved markers and placeholders, missing or provisional required inputs, and blocked rules or event rows awaiting a decision. Order them by dependency, with requirements and architecture before downstream choices.
 
-When done, please interview me one question at time as if I was a 12 year old to resolve all open questions. When the interview is done, delete the open questions and update DESIGN.md.
+Ask the user one question at a time, in plain language, and wait for each answer. Explain the choices and their consequences without assuming technical knowledge. Don't guess or answer for the user. Add questions raised by an answer to the list. Continue until every item is answered or explicitly deferred by the user.
 
-## `## Second Pass`
+Record each answer in the owning section, update references to point to that answer, then clear the resolved open-question or decision entry and only the markers the answer settles. Never reuse a cleared ID. Mark deferred items `DEFERRED` under a stable open-item ID in the owning file; preserve their context for step 09. Refresh dependent `SC` rules, event rows, acceptance criteria, and references. A `BLOCKED` rule becomes `ACTIVE` only when all its dependencies are settled. If a decision changes the stack, revisit the public sources and update affected rules and source references in `SECURITY.md`.
 
-When done, run the consolidater and interview (if necessary) a second time. This is a critical and invasive operation that we need to get correct.
+## Second pass
 
+Repeat the consolidation procedure after the interview. If this exposes new questions, interview the user again and reconcile the answers in the owning files. Repeat the Verify step after any second-pass interview edits. Preserve unresolved items for step 09. Report what moved, what was deleted, which decisions were resolved, and what remains uncertain.
