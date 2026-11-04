@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Dread Forge</title>
+  <desc id="desc">A bone-white skull in amber forge flames above a dark iron anvil, framed by a rounded charcoal tile.</desc>
+  <defs>
+    <linearGradient id="tile" x2="0" y2="1">
+      <stop stop-color="#292331"/>
+      <stop offset="1" stop-color="#14121c"/>
+    </linearGradient>
+    <linearGradient id="fire" x2="0" y2="1">
+      <stop stop-color="#ffe6a3"/>
+      <stop offset=".55" stop-color="#ffa64d"/>
+      <stop offset="1" stop-color="#ef653c"/>
+    </linearGradient>
+    <linearGradient id="iron" x2="0" y2="1">
+      <stop stop-color="#86748f"/>
+      <stop offset="1" stop-color="#46394f"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="232" height="232" rx="48" fill="url(#tile)"/>
+  <rect x="12" y="12" width="216" height="216" rx="41" fill="none" stroke="#8e6c65" stroke-opacity=".35"/>
+  <!-- A flame crown, with the skull held in its center. -->
+  <path d="M83 132C60 111 74 86 70 76c15 6 18 14 21 22-3-31 25-43 23-68 23 17 35 35 30 58 10-7 15-19 14-29 24 26 33 52 11 73Z" fill="url(#fire)"/>
+  <path d="M120 75c-20 0-31 13-31 29 0 11 5 17 13 22v10h36v-10c8-5 13-11 13-22 0-16-11-29-31-29Z" fill="#fff0d0"/>
+  <path d="m99 103 15 4-4 9h-8Zm42 0-15 4 4 9h8ZM120 115l-5 9h10Z" fill="#292331"/>
+  <path d="M114 130v6m12-6v6" stroke="#292331" stroke-width="4"/>
+  <!-- The broad horn and heel keep the anvil legible at icon size. -->
+  <path d="M47 145h145v16h-23c-12 0-17 6-17 16v9l20 12v8H89v-8l20-12v-9c0-9-5-14-15-16H76c-13 0-23-6-29-16Z" fill="url(#iron)"/>
+  <path d="M47 145h145" stroke="#ffc17a" stroke-width="6" stroke-linecap="round"/>
+  <path d="m119 169-9 8 9 8m21-16 9 8-9 8" fill="none" stroke="#ffe1b0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M91 206h79" stroke="#a88b9e" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#ffc17a">
+    <path d="m49 101 3-7 3 7-3 7Zm137 9 3-7 3 7-3 7ZM171 41l3-6 3 6-3 6Z"/>
+    <circle cx="57" cy="123" r="2"/>
+    <circle cx="187" cy="82" r="2"/>
+  </g>
+</svg>
