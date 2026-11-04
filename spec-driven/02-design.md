@@ -6,7 +6,7 @@ Use `UNKNOWN` for facts you weren't given, `TO BE DECIDED` for decisions not mad
 
 ## Direction
 
-Follow the `frontend-design` skill from https://github.com/anthropics/skills (`skills/frontend-design/SKILL.md`). Use the installed skill if there is one; otherwise read the file from a clone outside this repository. Work in its two passes. First write a brief: subject, audience, and the primary job of the main screens, drawn from the requirements. Then draft a token plan covering color, type, layout, and principles. Review that plan against the brief and the skill's list of generic defaults, and revise whatever would fit any product as well as this one. Record the brief and every revision you made in `## Overview`.
+Follow the `frontend-design` skill from https://github.com/anthropics/skills (`skills/frontend-design/SKILL.md`). Use the installed skill if there is one; otherwise read the file from a clone outside this repository. Work in its two passes. First write a brief: subject, audience, and the primary job of the main screens, drawn from the requirements. Then draft a token plan covering color, type, layout, and principles. Review that plan against the brief and the skill's list of generic defaults, and revise whatever would fit any product as well as this one. Record the brief and final design rationale in `## Overview`.
 
 ## DESIGN.md
 
@@ -21,10 +21,10 @@ One simple mark that reads at 16 px and at full size, drawn in the DESIGN.md pal
 
 ## design/preview.html
 
-One self-contained static page with no scripts, no external requests, and no framework. It shows the logo, the palette, the type scale, each component and its states, and the product's single most important screen built from realistic content in the requirements. Take screenshots at 390 px and 1440 px wide with whatever browser tool you have, critique them against the brief, and fix what's weak. Then remove one decoration you don't need. If you can't take screenshots, say so.
+One self-contained static page with no scripts, no external requests, and no framework. It shows the logo, the palette, the type scale, each component and its states, and the product's single most important screen built from realistic content in the requirements. Take screenshots at 390 px and 1440 px wide with whatever browser tool you have, critique them against the brief, and fix what's weak. If you can't take screenshots, say so.
 
 Leave out directory maps, code beyond the preview page, deployment, speculative features, and security controls. Keep DESIGN.md compact.
 
-## `## Interview`
+## Interview
 
-When done, please interview me one question at time as if I was a 12 year old to resolve all open questions. When the interview is done, delete the open questions and update DESIGN.md.
+Interview me one question at a time in plain language, waiting for each answer. Update `DESIGN.md` with the answers and remove only resolved questions. Preserve deferred items for steps 07 and 09.

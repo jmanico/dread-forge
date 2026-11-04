@@ -2,7 +2,7 @@
 
 Create `SECURITY_EVENTS.md` in the repository root: the security event ledger the build has to satisfy. Use Dread Ledger (https://github.com/jmanico/dread-ledger) from a local checkout, cloning it outside this repository if you need to. Read its `runbook.md`, `prompts/00-shared-instruction.md`, `prompts/01-assess.md`, and the files in `reference/`. Nothing is built yet, so run the assessment against the specifications instead of code.
 
-Read `REQUIREMENTS.md`, `ARCHITECTURE.md`, `SECURITY.md`, and `DESIGN.md`. The only other file you may change is `SECURITY.md`, and only to add `OD-###` entries for decisions an owner has to make: destinations, retention, personal-data collection, and audit durability.
+Read `REQUIREMENTS.md`, `ARCHITECTURE.md`, `SECURITY.md`, and `DESIGN.md`. The only other file you may change is `SECURITY.md`, to record and resolve `OD-###` owner decisions about destinations, retention, personal-data collection, and audit durability, and update affected rules.
 
 ## Sections
 
@@ -17,8 +17,8 @@ Read `REQUIREMENTS.md`, `ARCHITECTURE.md`, `SECURITY.md`, and `DESIGN.md`. The o
    Add project-specific events after the checklist rows as `SEC-APP-###`.
 3. `## Open Decisions`: references to the `OD-###` entries you added to `SECURITY.md`. Don't repeat their text here.
 
-Don't invent detectors, destinations, retention periods, or owners. Reply with the contents of `SECURITY_EVENTS.md`.
+Don't invent detectors, destinations, retention periods, or owners.
 
-## `## Interview`
+## Interview
 
-When done, please interview me one question at time as if I was a 12 year old to resolve all open questions. When the interview is done, delete the open questions and update SECURITY_EVENTS.md.
+Interview me one question at a time in plain language, waiting for each answer. Record answers in the owning sections of `SECURITY.md` and update affected rules and event rows. Replace resolved `OD-###` references with links to the recorded answers, then clear those entries. Preserve deferred decisions for steps 07 and 09.

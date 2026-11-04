@@ -16,7 +16,7 @@ Every package needs one line naming the requirement it serves and why the platfo
 - Honor explicit requirements and choices. Flag conflicts rather than resolving them silently.
 - Pick the simplest architecture that meets the requirements. Label any choice that isn't explicit or required as `PROPOSED`, with one sentence on why.
 - Use `UNKNOWN` for missing facts and `TO BE DECIDED` for pending decisions. Never invent features, integrations, or scale targets.
-- Record unresolved choices under `## Open Questions` as `AQ-1`, `AQ-2`, and so on. Don't ask about them now.
+- Record unresolved choices under `## Open Questions` as `AQ-1`, `AQ-2`, and so on.
 
 ## Sections
 
@@ -30,6 +30,6 @@ Every package needs one line naming the requirement it serves and why the platfo
 
 No code, directory trees, class lists, or deployment topology. Name the enforcement points, but leave the detailed controls to `SECURITY.md`.
 
-## `## Interview`
+## Interview
 
-When done, please interview me one question at time as if I was a 12 year old to resolve all open questions. When the interview is done, delete the open questions and update ARCHITECTURE.md.
+Interview me one question at a time in plain language, waiting for each answer. Update `ARCHITECTURE.md`, including confirmed choices, and remove only resolved questions. Preserve deferred items for steps 07 and 09.
