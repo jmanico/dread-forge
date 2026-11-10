@@ -1,6 +1,6 @@
 # 07 · Consolidate the specs
 
-Review the six spec files so each owns exactly one domain, nothing is duplicated, and nothing is lost. Move every rule to the file that owns it. Don't modify `REQUIREMENT_TEMPLATE.md`, `logo.svg`, or `design/preview.html`.
+Review the six spec files so each owns exactly one domain, nothing is duplicated, and nothing is lost. Move every rule to the file that owns it. Don't modify `REQUIREMENT_TEMPLATE.md`, `logo.svg`, or `design/preview.html`. Keep the `## Third-party libraries` section of `AGENTS.md` word for word, even where it overlaps another file.
 
 ## Ownership
 

@@ -17,10 +17,11 @@ Every package needs one line naming the requirement it serves and why the platfo
 - Pick the simplest architecture that meets the requirements. Label any choice that isn't explicit or required as `PROPOSED`, with one sentence on why.
 - Use `UNKNOWN` for missing facts and `TO BE DECIDED` for pending decisions. Never invent features, integrations, or scale targets.
 - Record unresolved choices under `## Open Questions` as `AQ-1`, `AQ-2`, and so on.
+- IDs are permanent. Never renumber or reuse one, because later files cite them.
 
 ## Sections
 
-1. `## Required Architecture Inputs`, one line each: requirements and design sources; target surfaces (from `REQUIREMENTS.md`); runtime and deployment environment; server framework; client frameworks; API style; authentication and session model; authorization model; data store and expected scale; security expectations (owned by `SECURITY.md`).
+1. `## Required Architecture Inputs`, one line each: requirements and design sources; target surfaces (from `REQUIREMENTS.md`); runtime and deployment environment; server framework; client frameworks; API style; authentication and session model; authorization model; data store and expected scale; logging library or platform logger; security expectations (owned by `SECURITY.md`).
 2. `## Stack`: every technology with its exact version line, requirement or explicit choice that justifies it, and status (`CONFIRMED` or `PROPOSED`).
 3. `## Components and Flows`: a compact table of component, responsibility, business rules enforced, data owned, requirement IDs, and status (`SUPPORTED`, `PARTIALLY DEFINED`, or `TO BE DECIDED`). Follow it with the main data flows and every trust boundary, naming where authentication, authorization, and validation are enforced.
 4. `## Dependency Rules`: `DR-1`, `DR-2`, ... covering explicit data ownership and one-way dependencies with no cycles. Keep business rules separate from transport, presentation, and vendor code.
@@ -32,4 +33,4 @@ No code, directory trees, class lists, or deployment topology. Name the enforcem
 
 ## Interview
 
-Interview me one question at a time in plain language, waiting for each answer. Update `ARCHITECTURE.md`, including confirmed choices, and remove only resolved questions. Preserve deferred items for steps 07 and 09.
+Interview me one question at a time in plain language, waiting for each answer, until every open question is answered or I defer it. Update `ARCHITECTURE.md`, including confirmed choices, and remove only resolved questions. Preserve deferred items for steps 07 and 09.

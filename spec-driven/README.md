@@ -19,7 +19,7 @@ Thirteen self-contained prompts that take a new web application and its APIs fro
 | [12 · Logging audit](12-logging-audit.md) | verified security logging | Dread Ledger |
 | [13 · Trim](13-trim.md) | a smaller dependency tree | Trim Reaper |
 
-Before you paste a step, fill in its placeholders. Step 01 takes `<<PROJECT_NOTES>>`, step 03 takes `<<STACK_CHOICES_OR_NONE>>` and `<<ARCHITECTURE_NOTES_OR_NONE>>`, and step 04 takes `<<SECURITY_NOTES_OR_NONE>>`. Steps 01–05 each end with an interview to resolve open questions. Steps 07 and 09 handle remaining or newly raised questions. Run step 09 again after the backlog to reconcile the specs and issues before building.
+Before you paste a step, fill in its placeholders. Step 01 takes `<<PROJECT_NOTES>>`, step 03 takes `<<STACK_CHOICES_OR_NONE>>` and `<<ARCHITECTURE_NOTES_OR_NONE>>`, and step 04 takes `<<SECURITY_NOTES_OR_NONE>>`. Steps 01–05 each end with an interview to resolve open questions. Steps 07 and 09 handle remaining or newly raised questions. Run step 09 again after the backlog to reconcile the specs and issues before building. Run it once more whenever a later step leaves open items, such as `NEEDS INPUT:` comments from the build or new `OD-###` entries from the logging audit.
 
 ## Stack and security
 
@@ -33,4 +33,6 @@ Steps 05, 06, 08, 12, and 13 use the [related projects](../README.md#related-pro
 
 ## What gets committed
 
-All the generated spec files, `AGENTS.md`, `REQUIREMENT_TEMPLATE.md`, `logo.svg`, and `design/preview.html` belong in your project repository, so later sessions read the same rules. The `threat-model/` run folder is private review material. Read it for sensitive details before committing it.
+All the generated spec files, `AGENTS.md`, `REQUIREMENT_TEMPLATE.md`, `logo.svg`, and `design/preview.html` belong in your project repository, so later sessions read the same rules. Commit after each step and read the diff, especially after steps 07 to 09, which rewrite files earlier steps created. Step 11 opens pull requests, so the specs must be on the default branch before it starts.
+
+`THREAT_MODEL.md` and the `threat-model/` run folder are private review material. Later steps read both, so keep them in the working tree. Read them for sensitive details before committing them, and keep them out of a public repository.

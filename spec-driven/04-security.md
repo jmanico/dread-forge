@@ -52,4 +52,4 @@ Before saving, check every rule for authority, provenance, applicability, and te
 
 ## Interview
 
-Interview me one question at a time in plain language, waiting for each answer. Record answers in the owning sections of `SECURITY.md`, update affected rules and references, and clear only resolved decisions. Keep rules `BLOCKED` while any dependency is unresolved. Preserve deferred items for steps 07 and 09.
+Interview me one question at a time in plain language, waiting for each answer, until every open decision is answered or I defer it. Record answers in the owning sections of `SECURITY.md`, update affected rules and references, and clear only resolved decisions. Keep rules `BLOCKED` while any dependency is unresolved. Preserve deferred items for steps 07 and 09.

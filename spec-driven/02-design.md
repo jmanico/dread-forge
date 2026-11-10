@@ -1,6 +1,6 @@
 # 02 · Design
 
-Create `DESIGN.md`, `logo.svg`, and `design/preview.html` in the repository root. Read `REQUIREMENTS.md` first. It owns behavior and workflows, and nothing is built yet.
+Create `DESIGN.md`, `logo.svg`, and `design/preview.html` in the repository root. Read `REQUIREMENTS.md` first. If it is missing, say so and stop. It owns behavior and workflows, and nothing is built yet.
 
 Use `UNKNOWN` for facts you weren't given, `TO BE DECIDED` for decisions not made yet, and `ASSUMPTION` for any inference the requirements don't support. Never invent values.
 
@@ -10,7 +10,7 @@ Follow the `frontend-design` skill from https://github.com/anthropics/skills (`s
 
 ## DESIGN.md
 
-- Follow the `@google/design.md` format: YAML front matter tokens, then the prose sections it defines, in its order. Put `## Open Questions` (`DQ-1`, `DQ-2`, ...) last. Run `npx @google/design.md lint DESIGN.md` and fix every error.
+- Follow the `@google/design.md` format (https://github.com/google-labs-code/design.md; `npx @google/design.md spec` prints it): YAML front matter tokens, then the prose sections it defines, in its order. Put `## Open Questions` (`DQ-1`, `DQ-2`, ...) last. Run `npx @google/design.md lint DESIGN.md` and fix every error.
 - Every foreground and background pair the design uses meets WCAG 2.2 AA: 4.5:1 for normal text, 3:1 for large text, and 3:1 for UI components, focus indicators, and meaningful graphics.
 - Describe components without choosing a CSS framework.
 - Cover the security-relevant interactions the requirements imply: how signed-in state shows, how destructive or privileged actions are confirmed, what error messages may reveal, and how user-supplied content is displayed.
@@ -27,4 +27,4 @@ Leave out directory maps, code beyond the preview page, deployment, speculative 
 
 ## Interview
 
-Interview me one question at a time in plain language, waiting for each answer. Update `DESIGN.md` with the answers and remove only resolved questions. Preserve deferred items for steps 07 and 09.
+Interview me one question at a time in plain language, waiting for each answer, until every open question is answered or I defer it. Update `DESIGN.md` with the answers and remove only resolved questions. Preserve deferred items for steps 07 and 09.

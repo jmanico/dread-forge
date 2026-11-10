@@ -14,7 +14,7 @@ One line per field, `UNKNOWN` if unanswered: project purpose; users and actors; 
 
 ### `## Functional Requirements`
 
-Group them under `###` headings by capability. Format: `- **FR-1.1** The system MUST ...`, using MUST, MUST NOT, SHOULD, and MAY. Each requirement is one externally observable, independently testable behavior. Name the actor, action, response, and data where the notes give them. Include the validation, authorization, and failure behavior each workflow needs, and leave out implementation detail. If a missing fact would make a requirement untestable, ask it as an open question instead.
+Group them under `###` headings by capability. Format: `- **FR-1.1** The system MUST ...`, using MUST, MUST NOT, SHOULD, and MAY. Each requirement is one externally observable, independently testable behavior. Name the actor, action, response, and data where the notes give them. Include the validation, authorization, and failure behavior each workflow needs, and leave out implementation detail. If a missing fact would make a requirement untestable, ask it as an open question instead. IDs are permanent. Never renumber or reuse one, because later files cite them.
 
 ### `## Non-Functional Requirements`
 
@@ -28,4 +28,4 @@ Save the file before the interview.
 
 ## Interview
 
-Interview me one question at a time in plain language, waiting for each answer. Update `REQUIREMENTS.md` with the answers and remove only resolved questions. Preserve deferred items for steps 07 and 09.
+Interview me one question at a time in plain language, waiting for each answer, until every open question is answered or I defer it. Update `REQUIREMENTS.md` with the answers and remove only resolved questions. Preserve deferred items for steps 07 and 09.
