@@ -1,6 +1,6 @@
 # 01 · Requirements
 
-Create `REQUIREMENTS.md` in the repository root. It owns WHAT the system must do. The repository is empty. Use only the notes below and my interview answers. Don't infer behavior. Anything the notes leave open goes under `## Open Questions`. Write requirements in plain language.
+Create `REQUIREMENTS.md` in the repository root. It owns WHAT the system must do. The repository is empty. Use only the notes below and my interview answers. Don't infer behavior. Anything the notes leave open goes under `## Open Questions`. Write requirements in plain language using ASD-STE100.
 
 ## Project notes
 
