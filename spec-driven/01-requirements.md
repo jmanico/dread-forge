@@ -29,3 +29,7 @@ Save the file before the interview.
 ## Interview
 
 Interview me one question at a time in plain language, waiting for each answer, until every open question is answered or I defer it. Update `REQUIREMENTS.md` with the answers and remove only resolved questions. Preserve deferred items for steps 07 and 09.
+
+## Double Check
+
+When donw please double check REQUIREMENTS.md to make sure it's all logical and looks good for our build.
