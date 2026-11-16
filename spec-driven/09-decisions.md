@@ -1,23 +1,29 @@
 # 09 · Resolve open items
 
-Run this once after the threat model and again after the backlog exists. Run it again whenever later steps leave open items.
+Gate: this step does not end until every open item is resolved and its marker removed. Nothing may be deferred to a later step.
 
-Collect every unresolved item in the repository. Skip `REQUIREMENT_TEMPLATE.md`, whose placeholders are intentional, and the `threat-model/` run folder, which is a fixed baseline. Look for:
+## Collect
 
+Scan the repo for the items below. Skip `REQUIREMENT_TEMPLATE.md` (its placeholders are intentional), `threat-model/` (a fixed baseline), and text that only defines these markers (the SDD prompt files, status legends).
 - `## Open Questions` entries and `OD-###` decisions
 - `TO BE DECIDED`, `UNKNOWN`, `TBD`, `PROPOSED`, `DEFERRED`, `ASSUMPTION`, and leftover `<<...>>` or `{{...}}` placeholders
-- blank or provisional lines in any `Required ... Inputs` or `Secure-Coding Inputs` section
-- `BLOCKED` rules in `SECURITY.md`, `unavailable_signal` rows in `SECURITY_EVENTS.md` that wait on an owner, and findings in `THREAT_MODEL.md` that need a decision
-- once the backlog exists: open `REQ-DECISION-*` issues, issues marked blocked or ambiguous, and every `NEEDS INPUT:` comment
+- Blank or provisional lines under `Required ... Inputs` or `Secure-Coding Inputs`
+- `BLOCKED` rules in `SECURITY.md`, `unavailable_signal` rows in `SECURITY_EVENTS.md` waiting on an owner, and `THREAT_MODEL.md` findings that need a decision
 
-Put them in one list, most foundational first: requirements, then architecture, then everything downstream.
+Order the list most foundational first: requirements, then architecture, then everything downstream.
+
+## Ask
 
 Ask me one question at a time in plain language, and wait for each answer. Don't batch questions, guess, or answer for me. If an answer raises a new question, add it to the list.
 
-When every item is answered or I've deferred it:
+If I can't answer an item yet, move it to the end of the list and come back to it. No item may be left open, marked deferred, or carried into a later step.
 
-- Write each answer into the file that owns it, remove the markers it settles, and clear the resolved open questions and `OD-###` entries. A `BLOCKED` rule becomes `ACTIVE` only when every dependency it has is settled.
-- Mark deferred items `DEFERRED` under their decision ID, assigning the owning file's next open-item ID if they don't have one. They stay visible and block only the work that depends on them.
-- Refresh everything downstream of a changed decision: `SC` rules, event rows, threat findings, acceptance criteria, coverage, and dependencies. If a decision changes the stack, revisit the public sources and update affected rules and source references in `SECURITY.md`.
-- In `THREAT_MODEL.md`, record each decision against its `T-nnn` finding without re-analyzing the threat. Tell me when an answer changes a component, trust boundary, or data flow enough to need a new threat-model run.
-- If the backlog exists, bring the epic and affected issues in line by creating, splitting, retiring, or re-parenting issues. Keep the ID scheme the existing issues use (`REQ-<CAPABILITY>-###` for leaves, `REQ-DECISION-###` for decisions) and never reuse an ID. Leaf bodies follow `REQUIREMENT_TEMPLATE.md`; other issues get short bodies that link spec IDs and issues. Pass bodies with `--body-file` from a temporary directory outside the repository. Retire an issue by closing it with a comment, never by deleting it. Then close each resolved `REQ-DECISION-*` issue with a comment recording the answer.
+## Apply (after every item is answered)
+
+- Write each answer into the file that owns it. Remove the markers it settles, the resolved open questions, and the `OD-###` entries. A `BLOCKED` rule becomes `ACTIVE` only when all of its dependencies are settled.
+- Update everything downstream of a changed decision: `SC` rules, event rows, threat findings, acceptance criteria, coverage, and dependencies. If the stack changes, revisit the public sources and update the affected `SECURITY.md` rules and source references.
+- `THREAT_MODEL.md`: record each decision against its `T-nnn` finding without re-analyzing the threat. Tell me when an answer changes a component, trust boundary, or data flow enough to need a new threat-model run.
+
+## Verify
+
+Run the Collect scan again. If it finds anything, return to Ask. Continue only when it finds nothing.
