@@ -4,18 +4,15 @@ Create or replace `SECURITY.md` in the repository root. Change nothing else. Thi
 
 ## Authority
 
-Read `REQUIREMENTS.md` (behavior, data, integrations, compliance), `DESIGN.md` (interaction and rendering), and `ARCHITECTURE.md` (components, stack, trust boundaries). If any is missing, stop and report it. Then read the notes below and any existing `SECURITY.md`. Preserve existing rule IDs. Notes and sources cannot override confirmed project facts. Record conflicts, use `UNKNOWN` for missing facts and `TO BE DECIDED` for open choices, and don't invent scope.
+Read `REQUIREMENTS.md` (behavior, data, integrations, compliance), `DESIGN.md` (interaction and rendering), and `ARCHITECTURE.md` (components, stack, trust boundaries). Then read the notes below. Preserve existing rule IDs. Notes and sources cannot override confirmed project facts. Record conflicts, use `UNKNOWN` for missing facts and `TO BE DECIDED` for open choices, and don't invent scope.
 
 Security notes: <<SECURITY_NOTES_OR_NONE>>
 
 ## Read the public sources
 
-- Node.js Security Best Practices: https://nodejs.org/en/learn/getting-started/security-best-practices
-- OWASP Node.js Security Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html
+Research the authoritative security guides for all components. Use official documentation for the exact runtime, framework, and library versions in `ARCHITECTURE.md` to verify implementation details. Also follow relevant OWASP cheat sheets for controls the guides don't cover. If a required source is unavailable, record the gap and block the affected rules rather than guessing.
 
-Read both sources for Node.js components. For other runtimes, use their official security guidance and relevant OWASP cheat sheets. Use official documentation for the exact runtime, framework, and library versions in `ARCHITECTURE.md` to verify implementation details. Follow relevant OWASP cheat sheets for controls the two guides don't cover. If a required source is unavailable, record the gap and block the affected rules rather than guessing.
-
-Apply guidance only to confirmed components. Check request and resource limits, event-loop blocking, input validation, output encoding, authentication, authorization, sessions, CSRF, errors, logging, dependencies, runtime permissions, prototype pollution, and unsafe code execution. Record why any relevant area is not applicable. Adapt examples to the chosen stack; an example package in a guide is not an approved dependency. Verify API names, defaults, support dates, and deprecated advice against current official documentation before using them.
+Apply guidance only to confirmed components. Check request and resource limits, event-loop blocking, input validation, output encoding, authentication, authorization, sessions, CSRF, errors, logging, dependencies, runtime permissions, prototype pollution, unsafe code execution and other crticial security categories. Record why any relevant area is not applicable. Adapt examples to the chosen stack; an example package in a guide is not an approved dependency. Verify names, defaults, support dates, and deprecated advice against current official documentation before using them.
 
 ## SECURITY.md
 
@@ -52,4 +49,4 @@ Before saving, check every rule for authority, provenance, applicability, and te
 
 ## Interview
 
-Interview me one question at a time in plain language, waiting for each answer, until every open decision is answered or I defer it. Record answers in the owning sections of `SECURITY.md`, update affected rules and references, and clear only resolved decisions. Keep rules `BLOCKED` while any dependency is unresolved. Preserve deferred items for steps 07 and 09.
+Interview me one question at a time in plain language, waiting for each answer, until every open question is answered. Update `SECURITY.md` with the answers. When done, remove all the resolved open questions. Do not continue until all open questions are resolved an removed.
