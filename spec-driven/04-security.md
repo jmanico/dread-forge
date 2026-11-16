@@ -12,7 +12,7 @@ Security notes: <<SECURITY_NOTES_OR_NONE>>
 
 Research the authoritative security guides for all components. Use official documentation for the exact runtime, framework, and library versions in `ARCHITECTURE.md` to verify implementation details. Also follow relevant OWASP cheat sheets for controls the guides don't cover. If a required source is unavailable, record the gap and block the affected rules rather than guessing.
 
-Apply guidance only to confirmed components. Check request and resource limits, event-loop blocking, input validation, output encoding, authentication, authorization, sessions, CSRF, errors, logging, dependencies, runtime permissions, prototype pollution, unsafe code execution and other crticial security categories. Record why any relevant area is not applicable. Adapt examples to the chosen stack; an example package in a guide is not an approved dependency. Verify names, defaults, support dates, and deprecated advice against current official documentation before using them.
+Apply guidance only to confirmed components. Check request and resource limits, event-loop blocking, input validation, output encoding, authentication, authorization, sessions, CSRF, errors, logging, dependencies, runtime permissions, prototype pollution, unsafe code execution and other critical security categories. Record why any relevant area is not applicable. Adapt examples to the chosen stack; an example package in a guide is not an approved dependency. Verify names, defaults, support dates, and deprecated advice against current official documentation before using them.
 
 ## SECURITY.md
 
