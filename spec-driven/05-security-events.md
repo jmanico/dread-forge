@@ -23,4 +23,4 @@ Don't invent detectors, destinations, retention periods, or owners.
 
 ## Interview
 
-Interview me one question at a time in plain language, waiting for each answer, until every open decision is answered or I defer it. Record answers in the owning sections of `SECURITY.md` and update affected rules and event rows. Replace resolved `OD-###` references with links to the recorded answers, then clear those entries. Preserve deferred decisions for steps 07 and 09.
+Interview me one question at a time in plain language, waiting for each answer, until every open question is answered. Update `SECURITY_EVENTS.md` with the answers. When done, remove all the resolved open questions. Do not continue until all open questions are resolved an removed.
