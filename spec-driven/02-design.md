@@ -27,4 +27,4 @@ Leave out directory maps, code beyond the preview page, deployment, speculative 
 
 ## Interview
 
-Interview me one question at a time in plain language, waiting for each answer, until every open question is answered. Update `DESIGN.md` with the answers. When done, remove all the resolved open questions. Do not continue until all open questions are resolved an removed.
+Interview me one question at a time in plain language, waiting for each answer, until every open question is answered. Update `DESIGN.md` with the answers. When done, remove all the resolved open questions. Do not continue until all open questions are resolved and removed.
