@@ -24,7 +24,7 @@ When content fits more than one file, controls go to `SECURITY.md`, event defini
 
 Collect every unresolved item in the six specs: open questions and decisions (`OQ`, `DQ`, `AQ`, `OD`), unresolved markers and placeholders, missing or provisional required inputs, and blocked rules or event rows awaiting a decision. Order them by dependency, with requirements and architecture before downstream choices.
 
-Interview me one question at a time in plain language, waiting for each answer. Explain the choices and their consequences without assuming technical knowledge. Don't guess or answer for me. Add questions raised by an answer to the list. Continue until every open or unresolved item is answered or explicitly deferred by me. Update all spec files with the answers. When done, remove all the resolved open questions. Do not continue until all open questions are resolved and removed.
+Interview me one question at a time in plain language, waiting for each answer. Explain the choices and their consequences without assuming technical knowledge. Don't guess or answer for me. Add questions raised by an answer to the list. If I can't answer an item yet, move it to the end of the list and come back to it. Continue until every open or unresolved item is answered. Update all spec files with the answers. When done, remove all the resolved open questions. Do not continue until all open questions are resolved and removed.
 
 ## Second pass
 
