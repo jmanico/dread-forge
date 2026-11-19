@@ -50,3 +50,7 @@ Before saving, check every rule for authority, provenance, applicability, and te
 ## Interview
 
 Interview me one question at a time in plain language, waiting for each answer, until every open question is answered. Update `SECURITY.md` with the answers. When done, remove all the resolved open questions. Do not continue until all open questions are resolved and removed.
+
+## Double-Check
+
+When done, double-check `SECURITY.md` to make sure it's all logical and looks good for our build.
