@@ -28,4 +28,3 @@ Interview me one question at a time in plain language, waiting for each answer, 
 ## Double-Check
 
 When done, double-check `SECURITY_EVENTS.md` to make sure it's all logical and looks good for our build.
-
