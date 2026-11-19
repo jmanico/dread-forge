@@ -66,3 +66,7 @@ Each criterion describes one observable pass/fail outcome, can be tested on its 
 - **External Dependencies**: [Third-party services, identity providers, APIs, or `None`]
 - **Open Decisions**: [Unresolved decisions that block approval or implementation, or `None`]
 ```
+
+## Double-Check
+
+When done, double-check this work to make sure it's all logical and looks good for our build.
