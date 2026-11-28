@@ -12,6 +12,7 @@ Read `REQUIREMENTS.md`, `DESIGN.md`, `ARCHITECTURE.md`, `SECURITY.md`, `SECURITY
 - A `## Third-party libraries` section containing the Trim Reaper library policy verbatim, copied from the "Third-party library policy" block of https://github.com/jmanico/trim-reaper's readme. Add one line saying only packages marked `CONFIRMED` in `ARCHITECTURE.md` are already approved; everything else goes through the policy.
 - The install, build, type-check, test, and audit commands from the Toolchain section of `ARCHITECTURE.md`, preserving its `N/A` reasons and `TO BE DECIDED` entries.
 - A change that alters behavior, a component, the stack, a security rule, or a security event updates the owning spec in the same pull request.
+- A pull request lists each acceptance criterion it meets with its evidence: the passing test and its result, command output, or a screenshot. When the pull request or its issue cites an `SC-*`, `SEC-*`, or `T-*` ID, a fresh agent session that did not write the change, or a human reviewer, re-runs the tests for those IDs and confirms the result in the pull request before it merges.
 - UI work is checked by screenshot at 390 px and 1440 px against `DESIGN.md` and `design/preview.html` before it's called done. Where the two differ, `DESIGN.md` wins.
 - After editing `DESIGN.md`, run `npx @google/design.md lint DESIGN.md` and fix every error.
 - Once `THREAT_MODEL.md` exists, a change that crosses a trust boundary named in `ARCHITECTURE.md` gets a Grim Prompter change review against the saved threat-model JSON before it merges.

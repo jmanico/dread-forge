@@ -12,6 +12,10 @@ Create `REQUIREMENTS.md` in the repository root. It owns WHAT the system must do
 
 One line per field, `UNKNOWN` if unanswered: project purpose; users and actors; core workflows; data entities; external integrations; authentication and roles; regulatory or privacy constraints; target surfaces (web UI, APIs, background jobs).
 
+### `## Ideal State`
+
+Two to four sentences on what an excellent finished product looks like for its users. Take it from the notes and add no requirements here. If the notes don't describe it, write `UNKNOWN` and ask about it as an open question.
+
 ### `## Functional Requirements`
 
 Group them under `###` headings by capability. Format: `- **FR-1.1** The system MUST ...`, using MUST, MUST NOT, SHOULD, and MAY. Each requirement is one externally observable, independently testable behavior. Name the actor, action, response, and data where the notes give them. Include the validation, authorization, and failure behavior each workflow needs, and leave out implementation detail. If a missing fact would make a requirement untestable, ask it as an open question instead. IDs are permanent. Never renumber or reuse one, because later files cite them.
@@ -32,4 +36,4 @@ Interview me one question at a time in plain language, waiting for each answer, 
 
 ## Double-Check
 
-When done, double-check `REQUIREMENTS.md` to make sure it's all logical and looks good for our build.
+When done, double-check `REQUIREMENTS.md` to make sure it's all logical, is consistent with the ideal state, and looks good for our build.
